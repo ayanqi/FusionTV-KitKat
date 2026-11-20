@@ -2,6 +2,8 @@ name: Build APK
 
 on:
   push:
+    branches:
+      - fix/remove-ad-toggle
   pull_request:
   workflow_dispatch:
 
@@ -11,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
